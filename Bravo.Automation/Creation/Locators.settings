@@ -1,0 +1,264 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Bravo.Automation.Creation" GeneratedClassName="Locators">
+  <Profiles />
+  <Settings>
+    <Setting Name="Login_name_txt_username" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">username</Value>
+    </Setting>
+    <Setting Name="Login_name_txt_password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">password</Value>
+    </Setting>
+    <Setting Name="Login_xpath_btn_login" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button</Value>
+    </Setting>
+    <Setting Name="Users_id_btn_addnew" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BtnAdd</Value>
+    </Setting>
+    <Setting Name="Users_name_txt_username" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">userName</Value>
+    </Setting>
+    <Setting Name="Users_name_txt_email" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">email</Value>
+    </Setting>
+    <Setting Name="Users_name_txt_password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">password</Value>
+    </Setting>
+    <Setting Name="Users_name_txt_repassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">passwordConfirm</Value>
+    </Setting>
+    <Setting Name="Users_name_txt_fullname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">fullName</Value>
+    </Setting>
+    <Setting Name="Users_name_ddl_role" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">roleID</Value>
+    </Setting>
+    <Setting Name="Users_name_txt_phone" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">phone</Value>
+    </Setting>
+    <Setting Name="Users_xpath_btn_save" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@class,'btn')][contains(.,'إضافة')]</Value>
+    </Setting>
+    <Setting Name="Users_csslocator_div_notification" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">div.ui-notification-message.ng-binding</Value>
+    </Setting>
+    <Setting Name="UserGroups_id_btn_addnew" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BtnAdd</Value>
+    </Setting>
+    <Setting Name="UserGroups_name_txt_name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">name</Value>
+    </Setting>
+    <Setting Name="UserGroups_xpath_btn_save" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@class,'btn')][contains(.,'إضافه')]</Value>
+    </Setting>
+    <Setting Name="UserGroups_id_txt_search" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">txtSearch</Value>
+    </Setting>
+    <Setting Name="UserGroups_xpath_icon_details" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@id,'BtnDetails')]</Value>
+    </Setting>
+    <Setting Name="UserGroups_xpath_btn_addusers" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@id,'BtnAdd')][contains(.,'إضافة مستخدمين')]</Value>
+    </Setting>
+    <Setting Name="UserGroups_xpath_txt_addsup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//tags-input/div/div</Value>
+    </Setting>
+    <Setting Name="UserGroups_xpath_txt_addinsp" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[2]/tags-input/div/div</Value>
+    </Setting>
+    <Setting Name="UserGroups_csslocator_div_notification" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">div.ui-notification-message.ng-binding</Value>
+    </Setting>
+    <Setting Name="UserGroups_xpath_option_user" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//ng-include/div/span</Value>
+    </Setting>
+    <Setting Name="UserGroups_id_btn_saveusers" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BtnUpdate</Value>
+    </Setting>
+    <Setting Name="UserGroups_csslocator_header_title" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">h2.ng-binding.ng-isolate-scope</Value>
+    </Setting>
+    <Setting Name="UserGroups_xpath_txt_addsuptype" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//input[@type='text']</Value>
+    </Setting>
+    <Setting Name="UserGroups_xpath_txt_addinsptype" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">(//input[@type='text'])[2]</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_btn_addnew" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@id,'BtnAdd')][contains(.,'نوع منشأة')]</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_txt_name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//input[contains(@name,'typeName')]</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_txt_displayname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//input[contains(@name,'displayName')]</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_btn_save" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@class,'btn')][contains(.,'إضافة')]</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_txt_search" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//input[contains(@placeholder,'بحث') or contains(@placeholder,'Search')]</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_icon_details" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@class,'btnDetails')]</Value>
+    </Setting>
+    <Setting Name="EntityTypes_csslocator_div_notification" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">div.ui-notification-message.ng-binding</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_a_textboxfield" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//a[contains(@displayname,'حقل نصي') or contains(@displayname,'TextBox')]</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_btn_savefields" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(.,'Save') or contains(.,'حفظ') and contains(@type,'submit')]</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_div_griddrop" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[contains(@class,'noData')]</Value>
+    </Setting>
+    <Setting Name="EntityGroups_xpath_btn_addnew" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@id,'BtnAdd')]</Value>
+    </Setting>
+    <Setting Name="EntityGroups_xpath_txt_name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//input[contains(@name,'name')]</Value>
+    </Setting>
+    <Setting Name="EntityGroups_xpath_ddl_entitytype" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//select[contains(@name,'entityTypeId')]</Value>
+    </Setting>
+    <Setting Name="EntityGroups_xpath_btn_save" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@class,'btn') and contains(.,'Add') or contains(.,'إضافة')]</Value>
+    </Setting>
+    <Setting Name="EntityGroups_xpath_txt_search" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//input[contains(@placeholder,'بحث') or contains(@placeholder,'Search')]</Value>
+    </Setting>
+    <Setting Name="EntityGroups_csslocator_icon_details" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">i.fa.fa-file-text-o</Value>
+    </Setting>
+    <Setting Name="EntityGroups_xpath_btn_addnewentity" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@id,'BtnAdd') and contains(.,'New Entity') or contains(.,'منشأة جديدة')]</Value>
+    </Setting>
+    <Setting Name="FormBuilder_xpath_btn_addnew" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(.,'Create New Form') or contains(.,'نموذج جديد')]</Value>
+    </Setting>
+    <Setting Name="FormBuilder_id_btn_formname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">formName</Value>
+    </Setting>
+    <Setting Name="FormBuilder_id_btn_formdisplayname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">formDisplayName</Value>
+    </Setting>
+    <Setting Name="FormBuilder_xpath_chk_scheduled" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[5]/p-checkbox/div/div[2]</Value>
+    </Setting>
+    <Setting Name="FormBuilder_xpath_btn_addform" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@type,'submit') and contains(.,'إضافة') or contains(.,'Add')]</Value>
+    </Setting>
+    <Setting Name="FormBuilder_csslocator_div_notification" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">div.ui-notification-message.ng-binding</Value>
+    </Setting>
+    <Setting Name="FormBuilder_id_txt_search" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">float-input</Value>
+    </Setting>
+    <Setting Name="FormBuilder_csslocator_div_formdispname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">div.col-lg-12.card-header &gt; a</Value>
+    </Setting>
+    <Setting Name="FormBuilder_xpath_a_textinputfield" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[@id='formControls']/div/div/i</Value>
+    </Setting>
+    <Setting Name="FormBuilder_id_div_griddrop" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">currentBuilderModel</Value>
+    </Setting>
+    <Setting Name="FormBuilder_xpath_btn_save" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(.,'Save') or contains(.,'حفظ')]</Value>
+    </Setting>
+    <Setting Name="Workflow_csslocator_icon_workflowsteps" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">i.fa.fa-sitemap</Value>
+    </Setting>
+    <Setting Name="Workflow_xpath_btn_startnewaction" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[contains(.,'إجراء جديد') and contains(@class,'btn')]</Value>
+    </Setting>
+    <Setting Name="Workflow_xpath_btn_save" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(.,'Save') or contains(.,'حفظ')]</Value>
+    </Setting>
+    <Setting Name="Workflow_csslocator_icon_startinspector" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">i.icon-inspector</Value>
+    </Setting>
+    <Setting Name="Workflow_name_txt_actionname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">name</Value>
+    </Setting>
+    <Setting Name="Workflow_name_txt_actiontype" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">actionTypeSelect</Value>
+    </Setting>
+    <Setting Name="Workflow_name_txt_actiontrigger" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">triggerTypeSelect</Value>
+    </Setting>
+    <Setting Name="Workflow_name_txt_actionnextstep" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">nextStepSelect</Value>
+    </Setting>
+    <Setting Name="Workflow_id_btn_addaction" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BtnUpdate</Value>
+    </Setting>
+    <Setting Name="EntityGroups_name_txt_entityname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">name</Value>
+    </Setting>
+    <Setting Name="EntityGroups_name_txt_entityweight" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">weight</Value>
+    </Setting>
+    <Setting Name="EntityGroups_name_txt_entitylong" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">longitude</Value>
+    </Setting>
+    <Setting Name="EntityGroups_name_txt_entitylat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">latitude</Value>
+    </Setting>
+    <Setting Name="EntityGroups_xpath_txt_entitytypefield" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//input[@type='text']</Value>
+    </Setting>
+    <Setting Name="EntityGroups_xpath_btn_saveentity" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(.,'إضافة') or contains(.,'Add')]</Value>
+    </Setting>
+    <Setting Name="Workflow_csslocator_icon_addstep" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">li.add-step.ng-scope</Value>
+    </Setting>
+    <Setting Name="Workflow_xpath_icon_stepsupervisor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[@id='tab']/ng-form[2]/workflow-actors-component/div/div/div/a[3]/div/center/i</Value>
+    </Setting>
+    <Setting Name="Workflow_xpath_icon_stepone" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//form/ul/li[2]</Value>
+    </Setting>
+    <Setting Name="Linking_id_btn_newlink" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BtnAdd</Value>
+    </Setting>
+    <Setting Name="Linking_id_select_entitygroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">entityGroupsSelect</Value>
+    </Setting>
+    <Setting Name="Linking_id_select_form" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">formsSelect</Value>
+    </Setting>
+    <Setting Name="Linking_id_select_usergroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">userGroupsSelect</Value>
+    </Setting>
+    <Setting Name="Linking_xpath_btn_savelink" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[contains(@id,'BtnUpdate') and contains(.,'Add') or contains(.,'إضافة')]</Value>
+    </Setting>
+    <Setting Name="Linking_csslocator_div_notification" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">div.ui-notification-message.ng-binding</Value>
+    </Setting>
+    <Setting Name="FormBuilder_csslocator_icon_switchactivate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">span.ui-inputswitch-slider</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_icon_edittextboxfield" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[2]/a[2]/i</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_txt_textboxfieldnamedb" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[2]/input</Value>
+    </Setting>
+    <Setting Name="EntityTypes_xpath_txt_savetextboxdetailsfield" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[3]/button</Value>
+    </Setting>
+    <Setting Name="Taskdistribution_xpath_div_singleentity" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[contains(@draggable,'true') and contains(@class,'single-entity')]</Value>
+    </Setting>
+    <Setting Name="Taskdistribution_xpath_div_droptoday" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[contains(@id,'#')]/div/ul</Value>
+    </Setting>
+    <Setting Name="test_xpath_fake" Type="System.String" Scope="User">
+      <Value Profile="(Default)">//button[contains(@id,'reload-button')]</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
