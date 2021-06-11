@@ -63,7 +63,8 @@ namespace Bravo.Automation.ActionKeywords
             }
             catch (NoSuchElementException e)
             {
-                Log.Error("No such element found | Exception: " + e.Message);
+                Log.Info($"No able to find element by IsElementPresent | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"No able to find element by IsElementPresent | Exception: {e.Message}");
                 return false;
             }
         }
@@ -107,13 +108,14 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Info("ScrollIntoView ..");
                 ExtentReporter.NodeInfo("ScrollIntoView ..");
+
                 IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
                 js.ExecuteScript("arguments[0].scrollIntoView(true);", driver.FindElement(by));
             }
             catch (Exception e)
             {
-                Log.Error("Failed ScrollIntoView | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed ScrollIntoView | Exception: " + e.Message);
+                Log.Info($"Not able to ScrollIntoView | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ScrollIntoView | Exception: {e.Message}");
             }
         }
 
@@ -123,13 +125,14 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Info("ClickByDriver ..");
                 ExtentReporter.NodeInfo("ClickByDriver ..");
+
                 driver.FindElement(by).Click();
                 return true;
             }
             catch (Exception e)
             {
-                Log.Error("Failed ClickByDriver | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed ClickByDriver | Exception: " + e.Message);
+                Log.Info($"Not able to ClickByDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ClickByDriver | Exception: {e.Message}");
                 return false;
             }
         }
@@ -140,13 +143,14 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Info("ClickByDriver ..");
                 ExtentReporter.NodeInfo("ClickByDriver ..");
+
                 element.Click();
                 return true;
             }
             catch (Exception e)
             {
-                Log.Error("Failed ClickByDriver | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed ClickByDriver | Exception: " + e.Message);
+                Log.Info($"Not able to ClickByDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ClickByDriver | Exception: {e.Message}");
                 return false;
             }
         }
@@ -157,14 +161,15 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Info("ClickByJavascript ..");
                 ExtentReporter.NodeInfo("ClickByJavascript ..");
+
                 IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
                 jse.ExecuteScript("arguments[arguments.length - 1].click();", driver.FindElement(by));
                 return true;
             }
             catch (Exception e)
             {
-                Log.Error("Failed ClickByJavascript | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed ClickByJavascript | Exception: " + e.Message);
+                Log.Info($"Not able to ClickByJavascript | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ClickByJavascript | Exception: {e.Message}");
                 return false;
             }
         }
@@ -175,14 +180,15 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Info("ClickByJavascript ..");
                 ExtentReporter.NodeInfo("ClickByJavascript ..");
+                
                 IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
                 jse.ExecuteScript("arguments[arguments.length - 1].click();", element);
                 return true;
             }
             catch (Exception e)
             {
-                Log.Error("Failed ClickByJavascript | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed ClickByJavascript | Exception: " + e.Message);
+                Log.Info($"Not able to ClickByJavascript | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ClickByJavascript | Exception: {e.Message}");
                 return false;
             }
         }
@@ -193,13 +199,14 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Info("ClearByDriver ..");
                 ExtentReporter.NodeInfo("ClearByDriver ..");
+
                 driver.FindElement(by).Clear();
                 return true;
             }
             catch (Exception e)
             {
-                Log.Error("Failed ClearByDriver | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed ClearByDriver | Exception: " + e.Message);
+                Log.Info($"Not able to ClearByDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ClearByDriver | Exception: {e.Message}");
                 return false;
             }
         }
@@ -210,13 +217,14 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Info("InputByDriver ..");
                 ExtentReporter.NodeInfo("InputByDriver ..");
+               
                 driver.FindElement(by).SendKeys(data);
                 return true;
             }
             catch (Exception e)
             {
-                Log.Error("Failed InputByDriver | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed InputByDriver | Exception: " + e.Message);
+                Log.Info($"Not able to InputByDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to InputByDriver | Exception: {e.Message}");
                 return false;
             }
         }
@@ -227,14 +235,15 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Info("InputByJavascript ..");
                 ExtentReporter.NodeInfo("InputByJavascript ..");
+                
                 IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
                 jse.ExecuteScript("arguments[0].value='" + data + "';",driver.FindElement(by));
                 return true;
             }
             catch (Exception e)
             {
-                Log.Error("Failed InputByJavascript | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed InputByJavascript | Exception: " + e.Message);
+                Log.Info($"Not able to InputByJavascript | Exception: { e.Message}");
+                ExtentReporter.NodeInfo($"Not able to InputByJavascript | Exception: {e.Message}");
                 return false;
             }
         }
@@ -245,13 +254,14 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Info("SelectTextByDriver ..");
                 ExtentReporter.NodeInfo("SelectTextByDriver ..");
+                
                 new SelectElement(driver.FindElement(by)).SelectByText(data);
                 return true;
             }
             catch (Exception e)
             {
-                Log.Error("Failed SelectTextByDriver | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed SelectTextByDriver | Exception: " + e.Message);
+                Log.Info($"Not able to SelectTextByDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to SelectTextByDriver | Exception: {e.Message}");
                 return false;
             }
         }
@@ -262,13 +272,14 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Info("SelectValueByDriver ..");
                 ExtentReporter.NodeInfo("SelectValueByDriver ..");
+                
                 new SelectElement(driver.FindElement(by)).SelectByValue(data);
                 return true;
             }
             catch (Exception e)
             {
-                Log.Error("Failed SelectValueByDriver | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed SelectValueByDriver | Exception: " + e.Message);
+                Log.Info($"Not able to SelectValueByDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to SelectValueByDriver | Exception: {e.Message}");
                 return false;
             }
         }
@@ -327,74 +338,214 @@ namespace Bravo.Automation.ActionKeywords
             return elementAttribute;
         }
 
+        private static bool InputByappiumDriver(By by, String data)
+        {
+            try
+            {
+                Log.Info("InputByappiumDriver ..");
+                ExtentReporter.NodeInfo("InputByappiumDriver ..");
+                           
+                appiumdriver.FindElement(by).SendKeys(data);
+                return true;
+
+            }
+            catch (Exception e)
+            {
+                Log.Info($"Not able to InputByappiumDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to InputByappiumDriver | Exception: {e.Message}");
+                return false;
+            }
+        }
+
+        private static bool ClickByappiumDriver(By by)
+        {
+            try
+            {
+                Log.Info("ClickByappiumDriver ..");
+                ExtentReporter.NodeInfo("ClickByappiumDriver ..");
+
+                appiumdriver.FindElement(by).Click();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Log.Info($"Not able to ClickByappiumDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to ClickByappiumDriver | Exception: {e.Message}");
+                return false;
+            }
+        }
+
+        private static bool SelectTextByappiumDriver(By by, string data)
+        {
+            try
+            {
+                Log.Info("SelectTextByappiumDriver ..");
+                ExtentReporter.NodeInfo("SelectTextByappiumDriver ..");
+
+                new SelectElement(appiumdriver.FindElement(by)).SelectByText(data);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Log.Info($"Not able to SelectTextByappiumDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to SelectTextByappiumDriver | Exception: {e.Message}");
+                return false;
+            }
+        }
+
+        private static bool SelectValueByappiumDriver(By by, string data)
+        {
+            try
+            {
+                Log.Info("SelectValueByappiumDriver ..");
+                ExtentReporter.NodeInfo("SelectValueByappiumDriver ..");
+
+                new SelectElement(appiumdriver.FindElement(by)).SelectByValue(data);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Log.Info($"Not able to SelectValueByappiumDriver | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Not able to SelectValueByappiumDriver | Exception: {e.Message}");
+                return false;
+            }
+        }
+
+        #region Public methods
         public static void Click(String obj, String data)
         {
-            Log.Info("Click on Webelement .. " + obj);
-            ExtentReporter.NodeInfo("Click on Webelement .. " + obj);
+            Log.Info($"Clicking on Element {obj}");
+            ExtentReporter.NodeInfo($"Clicking on Element {obj}");
+
             try
             {
                 string[] locator = obj.Split('_');
                 By by = LocateValue(locator[1], GetKey(obj));
 
-                //WaitForInvisibilityLoading(out double loadtime);
-                //Log.Info("Loadtime: " + loadtime);
-
-                //ScrollIntoView(by);
-                //WaitUntil(by);
-                WaitUntilClickable(by);
-                WaitSeconds("","2");
-                if (!ClickByDriver(by))
+                if (locator[0] == "Mobile")
                 {
-                    if (!ClickByJavascript(by))
-                    {
-                        Log.Error("Not able to click ..");
-                        ExtentReporter.NodeError("Not able to click ..");
-                        DriverScript.bResult = false;
-                        DriverScript.bOutcome = 3;
+                    WaitUntilVisible(by, appiumdriver);
+                    WaitSeconds("", "2");
+
+                   if(!ClickByappiumDriver(by))
+                   {
+                        Log.Error("Failed ClickByappiumDriver");
+                        ExtentReporter.NodeError("Failed ClickByappiumDriver");
+                        DriverScript.iOutcome = 3;
                     }
                 }
-            }
-            catch(Exception e)
-            {
-                Log.Error("Failed Click on Webelement | Exception: " + e.Message);
-                ExtentReporter.NodeError("Failed Click on Webelement | Exception: " + e.Message);
-                DriverScript.bResult = false;
-                DriverScript.bOutcome = 3;
-            }
-        }      
-
-        public static void Input(String obj, String data)
-        {
-            Log.Info("Input in Webelement .. " + obj);
-            ExtentReporter.NodeInfo("Input in Webelement .. " + obj);
-            try
-            {
-                string[] locator = obj.Split('_');
-                By by = LocateValue(locator[1], GetKey(obj));
-
-                //WaitForInvisibilityLoading(out double loadtime);
-                //Log.Info("Loadtime: " + loadtime);
-
-                //ScrollIntoView(by);
-                WaitUntilClickable(by);
-                WaitSeconds("", "2");
-                if (!InputByDriver(by, data))
+                else
                 {
-                    if (!InputByJavascript(by, data))
+                    WaitUntilClickable(by, driver);
+                    WaitSeconds("", "2");
+
+                    if (!ClickByDriver(by))
                     {
-                        Log.Error("Not able to input ..");
-                        ExtentReporter.NodeError("Not able to input ..");
-                        DriverScript.bResult = false;
-                        DriverScript.bOutcome = 3;
+                        if (!ClickByJavascript(by))
+                        {
+                            Log.Error("Failed ClickByDriver and ClickByJavascript");
+                            ExtentReporter.NodeError("Failed ClickByDriver and ClickByJavascript");
+                            DriverScript.iOutcome = 3;
+                        }
                     }
                 }
             }
             catch (Exception e)
             {
-                Log.Error("Failed Input in Webelement | Exception: " + e.Message);
-                ExtentReporter.NodeError("Failed Input in Webelement | Exception: " + e.Message);
-                DriverScript.bResult = false;
-                DriverScript.bOutcome = 3;
+                Log.Error($"Failed Click | Exception: {e.Message}");
+                ExtentReporter.NodeError($"Failed Click | Exception: {e.Message}");
+                ExtentReporter.AddScreenShot("");
+                DriverScript.iOutcome = 3;
+            }
+        }      
+
+        public static void Input(String obj, String data)
+        {
+            Log.Info("Typing in Element .. " + obj);
+            ExtentReporter.NodeInfo("Typing in Element .. " + obj);
+            try
+            {
+                string[] locator = obj.Split('_');
+                By by = LocateValue(locator[1], GetKey(obj));
+
+                if (locator[0] == "Mobile")
+                {
+                    WaitUntilVisible(by, appiumdriver);
+                    WaitSeconds("", "2");
+
+                    if (!InputByappiumDriver(by, data)) 
+                    {
+                        Log.Error("Failed InputByappiumDriver");
+                        ExtentReporter.NodeError("Failed InputByappiumDriver");
+                        DriverScript.iOutcome = 3;
+                    }
+                }
+                else
+                {
+                    WaitUntilClickable(by,driver);
+                    WaitSeconds("", "2");
+
+                    if (!InputByDriver(by, data))
+                    {
+                        if (!InputByJavascript(by, data))
+                        {
+                            Log.Error("Failed InputByDriver and InputByJavascript");
+                            ExtentReporter.NodeError("Failed InputByDriver and InputByJavascript");
+                            DriverScript.iOutcome = 3;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Failed Input | Exception: {e.Message}");
+                ExtentReporter.NodeError($"Failed Input | Exception: {e.Message}");
+                DriverScript.iOutcome = 3;
+            }
+        }
+
+        public static void Select(String obj, String data)
+        {
+            Log.Info($"Selecting from dropdown Element {obj}");
+            ExtentReporter.NodeInfo($"Selecting from dropdown Element {obj}");
+
+            try
+            {
+                string[] locator = obj.Split('_');
+                By by = LocateValue(locator[1], GetKey(obj));
+
+                if (locator[0] == "Mobile")
+                {
+                    WaitUntil(by, appiumdriver);
+                    if (!SelectTextByappiumDriver(by, data))
+                    {
+                        if (!SelectValueByappiumDriver(by, data))
+                        {
+                            Log.Error("Failed SelectTextByappiumDriver and SelectValueByappiumDriver");
+                            ExtentReporter.NodeError("Failed SelectTextByappiumDriver and SelectValueByappiumDriver");
+                            DriverScript.iOutcome = 3;
+                        }
+                    }
+                }
+                else
+                {
+                    WaitUntil(by, driver);
+                    if (!SelectTextByDriver(by, data))
+                    {
+                        if (!SelectValueByDriver(by, data))
+                        {
+                            Log.Error("Failed SelectTextByDriver and SelectValueByDriver");
+                            ExtentReporter.NodeError("Failed SelectTextByDriver and SelectValueByDriver");
+                            DriverScript.iOutcome = 3;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Failed Select | Exception: {e.Message}");
+                ExtentReporter.NodeError($"Failed Select | Exception: {e.Message}");
+                DriverScript.iOutcome = 3;
             }
         }
 
@@ -416,7 +567,7 @@ namespace Bravo.Automation.ActionKeywords
                 //WaitForInvisibilityLoading(out double loadtime);
                 //Log.Info("Loadtime: " + loadtime);
 
-                WaitUntilExists(byDragElement);
+                WaitUntilExists(byDragElement,driver);
                 if (IsElementPresent(byDragElement))
                 {
                     source = driver.FindElement(byDragElement);
@@ -427,7 +578,7 @@ namespace Bravo.Automation.ActionKeywords
                     source = driver.FindElement(byDragElement);
                 }
 
-                WaitUntilExists(byDropValue);
+                WaitUntilExists(byDropValue,driver);
                 if (IsElementPresent(byDragElement))
                 {
                     target = driver.FindElement(byDropValue);
@@ -451,10 +602,7 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Error("Not able to drag and drop | Exception: " + e.Message);
                 ExtentReporter.NodeError("Not able to drag and drop | Exception: " + e.Message);
-                DriverScript.bResult = false;
-                DriverScript.bOutcome = 3;
-
-               
+                DriverScript.iOutcome = 3;
             }
         }
 
@@ -487,7 +635,7 @@ namespace Bravo.Automation.ActionKeywords
                 //WaitForInvisibilityLoading(out double loadtime);
                 //Log.Info("Loadtime: " + loadtime);
 
-                WaitUntilExists(byDragElement);
+                WaitUntilExists(byDragElement,driver);
                 if (IsElementPresent(byDragElement))
                 {
                     source = driver.FindElement(byDragElement);
@@ -498,7 +646,7 @@ namespace Bravo.Automation.ActionKeywords
                     source = driver.FindElement(byDragElement);
                 }
 
-                WaitUntilExists(byDropValue);
+                WaitUntilExists(byDropValue,driver);
                 if (IsElementPresent(byDragElement))
                 {
                     target = driver.FindElement(byDropValue);
@@ -522,8 +670,7 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Error("Not able to drag and drop | Exception: " + e.Message);
                 ExtentReporter.NodeError("Not able to drag and drop | Exception: " + e.Message);
-                DriverScript.bResult = false;
-                DriverScript.bOutcome = 3;
+                DriverScript.iOutcome = 3;
 
             }
         }
@@ -546,25 +693,25 @@ namespace Bravo.Automation.ActionKeywords
                 //WaitForInvisibilityLoading(out double loadtime);
                 //Log.Info("Loadtime: " + loadtime);
 
-                WaitUntilExists(byDragElement);
+                WaitUntilExists(byDragElement,driver);
                 if (IsElementPresent(byDragElement))
                 {
                     source = driver.FindElement(byDragElement);
                 }
                 else
                 {
-                    WaitForElement(byDragElement);
+                    //WaitForElement(byDragElement);
                     source = driver.FindElement(byDragElement);
                 }
 
-                WaitUntilExists(byDropValue);
+                WaitUntilExists(byDropValue,driver);
                 if (IsElementPresent(byDragElement))
                 {
                     target = driver.FindElement(byDropValue);
                 }
                 else
                 {
-                    WaitForElement(byDragElement);
+                    //WaitForElement(byDragElement);
                     target = driver.FindElement(byDropValue);
                 }
 
@@ -587,10 +734,7 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Error("Not able to drag and drop Ang | Exception: " + e.Message);
                 ExtentReporter.NodeError("Not able to drag and drop Ang | Exception: " + e.Message);
-                DriverScript.bResult = false;
-                DriverScript.bOutcome = 3;
-
-
+                DriverScript.iOutcome = 3;
             }
         }
 
@@ -603,11 +747,11 @@ namespace Bravo.Automation.ActionKeywords
                 string[] locator = obj.Split('_');
                 By by = LocateValue(locator[1], GetKey(obj));
 
-                WaitForInvisibilityLoading(out double loadtime);
-                Log.Info("Loadtime: " + loadtime);
+                //WaitForInvisibilityLoading(out double loadtime);
+                //Log.Info("Loadtime: " + loadtime);
 
                 ScrollIntoView(by);
-                WaitUntilClickable(by);
+                WaitUntilClickable(by,driver);
 
                 IWebElement chkbx = driver.FindElement(by);
                 if (!chkbx.Selected)
@@ -618,8 +762,7 @@ namespace Bravo.Automation.ActionKeywords
                         {
                             Log.Error("Not able to CheckCheckbox ..");
                             ExtentReporter.NodeError("Not able to CheckCheckbox ..");
-                            DriverScript.bResult = false;
-                            DriverScript.bOutcome = 3;
+                            DriverScript.iOutcome = 3;
                         }
                     }
                 }
@@ -628,38 +771,9 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Error("Failed CheckCheckbox | Exception: " + e.Message);
                 ExtentReporter.NodeError("Failed CheckCheckbox | Exception: " + e.Message);
-                DriverScript.bResult = false;
-                DriverScript.bOutcome = 3;
+                DriverScript.iOutcome = 3;
             }
-        }        
-
-        public static void Select(String obj, String data)
-        {
-            try
-            {
-                Log.Info("Selecting from drop down list " + obj);
-                ExtentReporter.NodeInfo("Selecting from drop down list " + obj);
-                string[] locator = obj.Split('_');
-                By by = LocateValue(locator[1], GetKey(obj));
-
-                //WaitForInvisibilityLoading(out double loadtime);
-                //Log.Info("Loadtime: " + loadtime);
-
-                //ScrollIntoView(by);
-                WaitUntil(by);
-                if(!SelectValueByDriver(by, data))
-                {
-                    SelectTextByDriver(by, data);
-                }
-            }
-            catch (Exception e)
-            {
-                Log.Error("Not able to select from drop down list | Exception: " + e.Message);
-                ExtentReporter.NodeError("Not able to select from drop down list | Exception: " + e.Message);
-                DriverScript.bResult = false;
-                DriverScript.bOutcome = 3;
-            }
-        }
+        }    
 
         public static void KeyPress(String obj, String data)
         {
@@ -688,9 +802,9 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Error("Not able to KeyPress "+ data +" | Exception: " + e.Message);
                 ExtentReporter.NodeError("Not able to KeyPress " + data + " | Exception: " + e.Message);
-                DriverScript.bResult = false;
-                DriverScript.bOutcome = 3;
+                DriverScript.iOutcome = 3;
             }
-        }
+        }     
+        #endregion
     }
 }

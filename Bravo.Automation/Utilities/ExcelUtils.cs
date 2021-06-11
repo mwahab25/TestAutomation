@@ -25,7 +25,7 @@ namespace Bravo.Automation.Utilities
             catch (Exception e)
             {
                 Log.Error("ExcelUtils-SetExcelFile | Exception: " + e.Message);
-                DriverScript.bResult = false;
+                DriverScript.iOutcome = 3;
             }
         }
 
@@ -43,7 +43,7 @@ namespace Bravo.Automation.Utilities
             catch (Exception e)
             {
                 Log.Error("ExcelUtils-GetCellData | Exception: " + e.Message);
-                DriverScript.bResult = false;
+                DriverScript.iOutcome = 3;
                 return "";
             }
         }
@@ -62,7 +62,7 @@ namespace Bravo.Automation.Utilities
             catch (Exception e)
             {
                 Log.Error("ExcelUtils-GetRowCount | Exception: " + e.Message);
-                DriverScript.bResult = false;
+                DriverScript.iOutcome = 3;
             }
             return number;
         }
@@ -89,7 +89,7 @@ namespace Bravo.Automation.Utilities
             catch (Exception e)
             {
                 Log.Error("ExcelUtils-GetRowContains | Exception: " + e.Message);
-                DriverScript.bResult = false;
+                DriverScript.iOutcome = 3;
             }
             return rowNum;
         }
@@ -116,7 +116,7 @@ namespace Bravo.Automation.Utilities
             catch (Exception e)
             {
                 Log.Error("ExcelUtils-GetRowContains | Exception: " + e.Message);
-                DriverScript.bResult = false;
+                DriverScript.iOutcome = 3;
                 return 0;
             }
         }
@@ -134,7 +134,7 @@ namespace Bravo.Automation.Utilities
             catch (Exception e)
             {
                 Log.Error("ExcelUtils-SetCellData | Exception: " + e.Message);
-                DriverScript.bResult = false;
+                DriverScript.iOutcome = 3;
             }
 
         }

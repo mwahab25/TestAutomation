@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Bravo.Automation.Creation" GeneratedClassName="Locators">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CodeLab.Bravo.E2E.Tests.Creation" GeneratedClassName="Locators">
   <Profiles />
   <Settings>
     <Setting Name="Login_name_txt_username" Type="System.String" Scope="Application">
@@ -257,8 +257,47 @@
     <Setting Name="Taskdistribution_xpath_div_droptoday" Type="System.String" Scope="Application">
       <Value Profile="(Default)">//div[contains(@id,'#')]/div/ul</Value>
     </Setting>
-    <Setting Name="test_xpath_fake" Type="System.String" Scope="User">
-      <Value Profile="(Default)">//button[contains(@id,'reload-button')]</Value>
+    <Setting Name="Mobile_xpath_edittxt_username" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.EditText[1]</Value>
+    </Setting>
+    <Setting Name="Mobile_xpath_edittxt_password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">	
+/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.EditText[2]</Value>
+    </Setting>
+    <Setting Name="Mobile_xpath_btn_login" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[5]/android.widget.Button</Value>
+    </Setting>
+    <Setting Name="Tasks_csslocator_icon_details" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">i.fa.fa-eye</Value>
+    </Setting>
+    <Setting Name="Tasks_xpath_btn_action" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[@id='divActions']/div/div/button</Value>
+    </Setting>
+    <Setting Name="Mobile_xpath_txtview_firsttask" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView[1]</Value>
+    </Setting>
+    <Setting Name="Mobile_xpath_edittxt_firsttextinput" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">	
+/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.EditText</Value>
+    </Setting>
+    <Setting Name="Mobile_xpath_txtview_savetaskform" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">	
+/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView</Value>
+    </Setting>
+    <Setting Name="Mobile_xpath_txtview_backtotasks" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView</Value>
+    </Setting>
+    <Setting Name="Mobile_xpath_txtview_uploadtask" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.Button</Value>
+    </Setting>
+    <Setting Name="Taskdistribution_xpath_div_taskdropedtoday" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//div[contains(@id,'#1') and contains(@uib-tooltip,'#2')]/div/ul/li/div[2]</Value>
+    </Setting>
+    <Setting Name="FormBuilder_xpath_btn_saveandclosearrow" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//button[2]</Value>
+    </Setting>
+    <Setting Name="FormBuilder_xpath_btn_saveandclose" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">//li[2]/a/span[2]</Value>
     </Setting>
   </Settings>
 </SettingsFile>

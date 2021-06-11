@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bravo.Automation.Config
+﻿namespace Bravo.Automation.Config
 {
     enum AppTypes
     {
@@ -14,19 +8,15 @@ namespace Bravo.Automation.Config
     enum OS
     {
         Windows,
-        Android
+        MacOS,
+        Android,
+        IOS
     }
     enum Browsers
     {
         Chrome,
-        IE,
         Firefox,
         Edge
-    }
-    enum MobileOS
-    {
-        Android,
-        IOS
     }
     enum MobileAppTypes
     {
@@ -44,12 +34,12 @@ namespace Bravo.Automation.Config
     }
     enum LocatorTypes
     {
-        xpath,
-        id,
-        csslocator,
-        classname,
-        linktext,
-        name,
-        partiallinktext
+        XPath,
+        Id,
+        CssLocator,
+        ClassName,
+        LinkText,
+        Name,
+        PartialLinkText
     }
 }

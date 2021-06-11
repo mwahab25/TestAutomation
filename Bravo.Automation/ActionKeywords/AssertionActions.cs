@@ -96,6 +96,7 @@ namespace Bravo.Automation.ActionKeywords
 
         }
 
+        #region Public methods
         public static void AssertElementContains(String obj, String data)
         {
             Log.Info("AssertElementContains .. " + obj);
@@ -109,29 +110,80 @@ namespace Bravo.Automation.ActionKeywords
                 //Log.Info("Loadtime: " + loadtime);
 
                 //ScrollIntoView(by);
-                WaitUntil(by);
+                WaitUntil(by,driver);
 
                 Assert.AreEqual(GetTextByDriver(by), data);
                 WaitSeconds("", "2");
-                DriverScript.bAssert = true;
-                DriverScript.bOutcome = 1;
+                DriverScript.iOutcome = 1;
             }
             catch (AssertFailedException e)
             {
                 Log.Error("AssertElementContains Assert Fail| Exception: " + e.Message);
                 ExtentReporter.NodeFail("AssertElementContains Assert Fail| Exception: " + e.Message);
-                DriverScript.bResult = true;
-                DriverScript.bAssert = false;
-                DriverScript.bOutcome = 2;
+                DriverScript.iOutcome = 2;
             }
             catch (Exception e)
             {
                 Log.Error("Failed AssertElementContains | Exception: " + e.Message);
                 ExtentReporter.NodeError("Failed AssertElementContains | Exception: " + e.Message);
-                DriverScript.bResult = false;
-                DriverScript.bOutcome = 3;
+                DriverScript.iOutcome = 3;
             }
         }
 
+        public static void AssertTaskcompleted(String obj, String data)
+        {
+            Log.Info("AssertTaskcompleted .. " + obj);
+            ExtentReporter.NodeInfo("AssertTaskcompleted .. " + obj);
+            try
+            {
+                string[] locator = obj.Split('_');
+               
+
+                string newcompleteddata;
+                string newprogressddata;
+
+                newcompleteddata = GetKey(obj).Replace("#1", DateTime.Today.Date.ToString("dd/MM/yyyy")).Replace("#2", DateTime.Today.Date.ToString("مكتملة"));
+                newprogressddata = GetKey(obj).Replace("#1", DateTime.Today.Date.ToString("dd/MM/yyyy")).Replace("#2", DateTime.Today.Date.ToString("جاري"));
+
+
+                By bycompleteddata = LocateValue(locator[1], newcompleteddata);
+                By byprogressddata = LocateValue(locator[1], newprogressddata);
+
+                ExtentReporter.NodeInfo($"completed .. {newcompleteddata}|{bycompleteddata}");
+
+                ExtentReporter.NodeInfo($"inprogress .. {newprogressddata}|{byprogressddata}");
+
+                if (IsElementPresent(bycompleteddata))
+                {
+                    
+                    WaitSeconds("", "2");
+                    DriverScript.iOutcome = 1;
+                }
+                else if (IsElementPresent(byprogressddata))
+                {
+                    
+                    Assert.Fail();
+                }
+                else
+                {
+                    ExtentReporter.NodeInfo("nothing .. ");
+                    Assert.Fail();
+                }
+                
+            }
+            catch (AssertFailedException e)
+            {
+                Log.Error("AssertTaskcompleted Assert Fail| Exception: " + e.Message);
+                ExtentReporter.NodeFail("AssertTaskcompleted Assert Fail| Exception: " + e.Message);
+                DriverScript.iOutcome = 2;
+            }
+            catch (Exception e)
+            {
+                Log.Error("Failed AssertTaskcompleted | Exception: " + e.Message);
+                ExtentReporter.NodeError("Failed AssertTaskcompleted | Exception: " + e.Message);
+                DriverScript.iOutcome = 3;
+            }
+        }
+        #endregion
     }
 }

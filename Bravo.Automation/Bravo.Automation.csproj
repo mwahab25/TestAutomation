@@ -435,14 +435,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionKeywords\AssertionActions.cs" />
-    <Compile Include="ActionKeywords\BrowserActions.cs" />
     <Compile Include="ActionKeywords\DriverActions.cs" />
-    <Compile Include="ActionKeywords\DriverFactory.cs" />
     <Compile Include="ActionKeywords\ElementActions.cs" />
-    <Compile Include="ActionKeywords\Wait.cs" />
     <Compile Include="Config\Constants.cs" />
     <Compile Include="Config\Enums.cs" />
-    <Compile Include="ActionKeywords\AppActions.cs" />
     <Compile Include="ActionKeywords\WaitActions.cs" />
     <Compile Include="Creation\Locators.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -462,9 +458,7 @@
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Locators.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Files\Bravo-Product-v5.1.4.apk" />
     <None Include="packages.config" />
-    <None Include="Files\Bravo-4.4.8.apk" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
@@ -487,8 +481,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Files\chromedriver.exe" />
-    <Content Include="Files\dragdrop.js" />
+    <Content Include="Utilities\dragdrop.js" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
@@ -509,7 +502,7 @@
     <Error Condition="!Exists('..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Configuration.UserSecrets.2.2.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.AspNetCore.Server.IIS.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.AspNetCore.Server.IIS.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.targets'))" />
-    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.88.0.4324.9600\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.88.0.4324.9600\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.91.0.4472.1900\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.91.0.4472.1900\build\Selenium.WebDriver.ChromeDriver.targets'))" />
   </Target>
   <Import Project="..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.2.0.0\build\net45\MSTest.TestAdapter.targets')" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" />
@@ -517,4 +510,5 @@
   <Import Project="..\packages\Microsoft.AspNetCore.Server.IIS.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets" Condition="Exists('..\packages\Microsoft.AspNetCore.Server.IIS.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets')" />
   <Import Project="..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.targets" Condition="Exists('..\packages\Microsoft.AspNetCore.Server.IISIntegration.2.2.0\build\netstandard2.0\Microsoft.AspNetCore.Server.IISIntegration.targets')" />
   <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.88.0.4324.9600\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.88.0.4324.9600\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.91.0.4472.1900\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.91.0.4472.1900\build\Selenium.WebDriver.ChromeDriver.targets')" />
 </Project>

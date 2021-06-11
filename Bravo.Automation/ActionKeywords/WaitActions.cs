@@ -10,12 +10,13 @@ namespace Bravo.Automation.ActionKeywords
 {
     public partial class Keywords
     {
-        private static void WaitUntil(By by)
+        private static void WaitUntil(By by, IWebDriver driver)
         {
             try
             {
                 Log.Info("WaitUntil ..");
                 ExtentReporter.NodeInfo("WaitUntil ..");
+
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Constants.Timeout));
                 wait.Until(d => d.FindElement(by));
             }
@@ -25,7 +26,7 @@ namespace Bravo.Automation.ActionKeywords
             }
         }
 
-        private static void WaitUntilClickable(By by)
+        private static void WaitUntilClickable(By by, IWebDriver driver)
         {
             try
             {
@@ -40,7 +41,7 @@ namespace Bravo.Automation.ActionKeywords
             }
         }
 
-        private static void WaitUntilExists(By by)
+        private static void WaitUntilExists(By by, IWebDriver driver)
         {
             try
             {
@@ -53,6 +54,23 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Error("Failed WaitUntilExists | Exception: " + e.Message);
                 ExtentReporter.NodeInfo("Failed WaitUntilExists | Exception: " + e.Message);
+            }
+        }
+      
+        private static void WaitUntilVisible(By by,IWebDriver driver)
+        {
+            try
+            {
+                Log.Info("WaitUntilVisible ..");
+                ExtentReporter.NodeInfo("WaitUntilVisible ..");
+                
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Constants.Timeout));
+                wait.Until(ExpectedConditions.ElementIsVisible(by));
+            }
+            catch (Exception e)
+            {
+                Log.Error("Failed WaitUntilVisible | Exception: " + e.Message);
+                ExtentReporter.NodeError("Failed WaitUntilVisible | Exception: " + e.Message);
             }
         }
 
@@ -73,22 +91,6 @@ namespace Bravo.Automation.ActionKeywords
             {
                 Log.Error("Failed WaitFluentUntil | Exception: " + e.Message);
                 ExtentReporter.NodeError("Failed WaitFluentUntil | Exception: " + e.Message);
-            }
-        }
-
-        private static void WaitUntilVisible(By by)
-        {
-            try
-            {
-                Log.Info("WaitUntilVisible ..");
-                ExtentReporter.NodeInfo("WaitUntilVisible ..");
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(Constants.Timeout));
-                wait.Until(ExpectedConditions.ElementIsVisible(by));
-            }
-            catch (Exception e)
-            {
-                Log.Error("Failed WaitUntilVisible | Exception: " + e.Message);
-                ExtentReporter.NodeError("Failed WaitUntilVisible | Exception: " + e.Message);
             }
         }
 
@@ -208,22 +210,24 @@ namespace Bravo.Automation.ActionKeywords
             }
         }
 
+        #region Public methods
         public static void WaitSeconds(String obj, String data)
         {
             try
-            {
-                
+            {                
                 int millisec =Convert.ToInt32(data) * 1000;
-                Log.Info("WaitSeconds " + data + " seconds ");
-                ExtentReporter.NodeInfo("WaitSeconds " + data + " seconds ");
+                Log.Info($"Waiting {data} seconds");
+                ExtentReporter.NodeInfo($"Waiting {data} seconds");
+                
                 Thread.Sleep(millisec);               
             }
             catch (Exception e)
             {
-                Log.Error("Failed WaitSeconds | Exception: " + e.Message);
-                ExtentReporter.NodeInfo("Failed WaitSeconds | Exception: " + e.Message);
+                Log.Error($"Failed WaitSeconds | Exception: {e.Message}");
+                ExtentReporter.NodeInfo($"Failed WaitSeconds | Exception: {e.Message}");
+                DriverScript.iOutcome = 3;
             }
         }
-       
+        #endregion
     }
 }
